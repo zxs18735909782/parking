@@ -1,0 +1,41 @@
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.box{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+
+    box-shadow:10px -10px 0 #333333;
+    transition:all 5s ease;
+    /*transition:width 1s cubic-bezier(0.32, 0.79, 0, 0.57);*/
+}
+.box:hover{
+    /*background-color: blue;*/
+    width:600px;
+}
+.text {
+    font-size: 100px;
+    color: gray;
+}
+.text:hover{
+  color: green;
+}
+
+.box1{
+    width:300px;
+    height: 300px;
+    background: gray;
+    transition: all 10s ease;
+    margin: auto;
+    /*background:-webkit-gradient(linear,0% 55%, 34% 45%, from(#2B9962), to(#0C3307), color-stop(0.5,#336600));*/
+    /*background:linear-gradient(to right,red,orange,yellow,green,blue,black,purple);*/
+
+}
+.box1:hover{
+    border-radius:50%;
+    background:linear-gradient(to right,red,orange,yellow,green,blue,black,purple);
+    transform:rotate(360deg) scale(1.5);
+}
+

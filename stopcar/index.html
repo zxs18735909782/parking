@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>停车场</title>
+    <link rel="stylesheet" href="./css/stopcar.css">
+    <script language="JavaScript">
+			function startTime()
+			{
+				var today=new Date();//定义日期对象
+				var yyyy = today.getFullYear();//通过日期对象的getFullYear()方法返回年
+				var MM = today.getMonth()+1;//通过日期对象的getMonth()方法返回年
+				var dd = today.getDate();//通过日期对象的getDate()方法返回年
+				var hh=today.getHours();//通过日期对象的getHours方法返回小时
+				var mm=today.getMinutes();//通过日期对象的getMinutes方法返回分钟
+				var ss=today.getSeconds();//通过日期对象的getSeconds方法返回秒
+				// 如果分钟或小时的值小于10，则在其值前加0，比如如果时间是下午3点20分9秒的话，则显示15：20：09
+				MM=checkTime(MM);
+				dd=checkTime(dd);
+				mm=checkTime(mm);
+				ss=checkTime(ss);
+				var day; //用于保存星期（getDay()方法得到星期编号）
+				if(today.getDay()==0)   day   =   "星期日 "
+				if(today.getDay()==1)   day   =   "星期一 "
+				if(today.getDay()==2)   day   =   "星期二 "
+				if(today.getDay()==3)   day   =   "星期三 "
+				if(today.getDay()==4)   day   =   "星期四 "
+				if(today.getDay()==5)   day   =   "星期五 "
+				if(today.getDay()==6)   day   =   "星期六 "
+				document.getElementById('nowDateTimeSpan').innerHTML=hh+":"+mm+":"+ss+ '&nbsp;&nbsp;' + day + "<br> "+yyyy+"年"+MM +"月"+ dd +"日";
+				setTimeout('startTime()',1000);//每一秒中重新加载startTime()方法
+			}
+
+			function checkTime(i)
+			{
+				if (i<10){
+					i="0" + i;
+				}
+				  return i;
+			}
+		</script>
+</head>
+<body onload="startTime()">
+    <div class="stopcar">
+        <!--头部开始-->
+        <div class="head">
+            <div class="top">
+                <div class="top_left">
+                    <img src="./image/logo.png" alt="" class="ph1">
+                    <span class="text1">停车场运营监控中心</span>
+                </div>
+                <div class="top_right" >
+                    <font color="#fff"><span id="nowDateTimeSpan"></span></font>
+                    <!--<span class="text2">11:11:11<br/>2019.02.03</span>-->
+                    <!--<div class="time"></div>-->
+                    <!--<div class="date"></div>-->
+                </div>
+            </div>
+            <hr style="border-color:#00a0e9;"/>
+            <!--头部结束-->
+            <!--内容开始-->
+            <!--左边部分开始-->
+            <div class="body1">
+                <div class="body1_top">
+                    <span class="text3">今日收入/元<br/></span>
+                    <span class="text4">同比昨日(%)<br><br>
+                        <img src="image/jiantou.png" alt="" class="ph2"><br>
+                        <span class="text5">
+                            0.94%
+                        </span>
+                    </span>
+                    <span class="text6">1,848,732</span>
+                </div>
+                <div class="body1_center"></div>
+                <div class="body1_bottom">
+                    <span class="body1_bottom_text">设备警告</span>
+                    <marquee behavior="scroll"  direction="up" scrollamount="5" onmouseover="this.stop()" onmouseout="this.start()">
+                        <!--巡逻人员1-->
+                        <div class="body1_bottom_1">
+                            <div class="body1_bottom_radius">
+                                <div class="body1_bottom_radius1">
+                                    <span class="radius1_text">未处理</span>
+                                </div>
+                                <div class="radius1_right">巡逻人员:李白</div>
+                            </div>
+                            <div class="body1_right">19:00</div>
+                        </div>
+                        <div class="body1_bottom_text1">
+                            <!--<div class="body1_1">-->
+                            <span class="body1_bottom_text2">绿地世纪城</span>
+                            <span class="body1_bottom_text3">入口门坏了</span>
+                            <!--</div>-->
+                        </div>
+                        <!--巡逻人员2-->
+                        <div class="body1_bottom_2">
+                            <div class="body1_bottom_radius_red">
+                                <div class="body1_bottom_radius_red1">
+                                    <span class="radius1_text">未处理</span>
+                                </div>
+                                <div class="radius1_right">巡逻人员:李白</div>
+                            </div>
+                            <div class="body1_right">19:00</div>
+                        </div>
+                        <div class="body1_bottom_text1">
+                            <!--<div class="body1_1">-->
+                            <span class="body1_bottom_text2">绿地世纪城</span>
+                            <span class="body1_bottom_text3">入口门坏了</span>
+                            <!--</div>-->
+                        </div>
+                        <!--巡逻人员3-->
+                        <div class="body1_bottom_1">
+                            <div class="body1_bottom_radius">
+                                <div class="body1_bottom_radius1">
+                                    <span class="radius1_text">未处理</span>
+                                </div>
+                                <div class="radius1_right">巡逻人员:李白</div>
+                            </div>
+                            <div class="body1_right">19:00</div>
+                        </div>
+                        <div class="body1_bottom_text1">
+                            <!--<div class="body1_1">-->
+                            <span class="body1_bottom_text2">绿地世纪城</span>
+                            <span class="body1_bottom_text3">入口门坏了</span>
+                            <!--</div>-->
+                        </div>
+                        <!--巡逻人员4-->
+                        <div class="body1_bottom_2">
+                        <div class="body1_bottom_radius_red">
+                        <div class="body1_bottom_radius_red1">
+                        <span class="radius1_text">未处理</span>
+                        </div>
+                        <div class="radius1_right">巡逻人员:李白</div>
+                        </div>
+                        <div class="body1_right">19:00</div>
+                        </div>
+                        <div class="body1_bottom_text1">
+                        <div class="body1_1">
+                        <span class="body1_bottom_text2">绿地世纪城</span>
+                        <span class="body1_bottom_text3">入口门坏了</span>
+                        </div>
+                        </div>
+                        <!--巡逻人员5-->
+                        <div class="body1_bottom_1">
+                            <div class="body1_bottom_radius">
+                                <div class="body1_bottom_radius1">
+                                    <span class="radius1_text">未处理</span>
+                                </div>
+                                <div class="radius1_right">巡逻人员:李白</div>
+                            </div>
+                            <div class="body1_right">19:00</div>
+                        </div>
+                        <div class="body1_bottom_text1">
+                            <!--<div class="body1_1">-->
+                            <span class="body1_bottom_text2">绿地世纪城</span>
+                            <span class="body1_bottom_text3">入口门坏了</span>
+                            <!--</div>-->
+                        </div>
+                        <!--巡逻人员6-->
+                        <div class="body1_bottom_2">
+                        <div class="body1_bottom_radius_red">
+                        <div class="body1_bottom_radius_red1">
+                        <span class="radius1_text">未处理</span>
+                        </div>
+                        <div class="radius1_right">巡逻人员:李白</div>
+                        </div>
+                        <div class="body1_right">19:00</div>
+                        </div>
+                        <div class="body1_bottom_text1">
+                        <div class="body1_1">
+                        <span class="body1_bottom_text2">绿地世纪城</span>
+                        <span class="body1_bottom_text3">入口门坏了</span>
+                        </div>
+                        </div>
+                    </marquee>
+                </div>
+            </div>
+            <!--左边部分结束-->
+            <!--中间部分开始-->
+            <div class="body2">
+                <div class="body2_top"></div>
+                <div class="body2_bottom">
+                    <marquee behavior="scroll" direction="left" scrollamount="10" onmouseover="this.stop()" onmouseout="this.start()">
+                        <div class="image1">
+                            <div class="body2_top_text1">2018-8-28 1:18</div>
+                            <img src="./image/car.png" alt="" class="car"><br>
+                            <div class="body2_top_text2">郑州市-千玺广场<br>车牌 晋A9ss66</div>
+                        </div>
+                        <div class="image1">
+                            <div class="body2_top_text1">2018-8-28 1:18</div>
+                            <img src="./image/car.png" alt="" class="car"><br>
+                            <div class="body2_top_text2">郑州市-千玺广场<br>车牌 晋A9ss66</div>
+                        </div>
+                        <div class="image1">
+                            <div class="body2_top_text1">2018-8-28 1:18</div>
+                            <img src="./image/car.png" alt="" class="car"><br>
+                            <div class="body2_top_text2">郑州市-千玺广场<br>车牌 晋A9ss66</div>
+                        </div>
+                        <div class="image1">
+                            <div class="body2_top_text1">2018-8-28 1:18</div>
+                            <img src="./image/car.png" alt="" class="car"><br>
+                            <div class="body2_top_text2">郑州市-千玺广场<br>车牌 晋A9ss66</div>
+                        </div>
+                        <div class="image1">
+                            <div class="body2_top_text1">2018-8-28 1:18</div>
+                            <img src="./image/car.png" alt="" class="car"><br>
+                            <div class="body2_top_text2">郑州市-千玺广场<br>车牌 晋A9ss66</div>
+                        </div>
+                        <div class="image1">
+                            <div class="body2_top_text1">2018-8-28 1:18</div>
+                            <img src="./image/car.png" alt="" class="car"><br>
+                            <div class="body2_top_text2">郑州市-千玺广场<br>车牌 晋A9ss66</div>
+                        </div>
+                    </marquee>
+                </div>
+            </div>
+            <!--中间部分结束-->
+            <!--右边部分开始-->
+            <div class="body3">
+                <!--右上-->
+                <div class="body3_top">
+                    <div class="body3_top1">
+                        <span class="body3_top1_text1">201232<br></span>
+                        <span class="body3_top1_text2">开放泊车位</span>
+                    </div>
+                    <div class="body3_top1">
+                        <span class="body3_top2_text1">201232<br></span>
+                        <span class="body3_top2_text2">占用泊位</span>
+                    </div>
+                    <div class="body3_top2">
+                        <span class="body3_top3_text1">201232</span>
+                        <span class="body3_top3_text2">泊位利用率</span>
+                    </div>
+                </div>
+                <div class="body3_center">
+                    <div class="body3_center_title">停车收费排行</div>
+                    <!--图表部分-->
+                    <div class="body3_center_chart1">
+                        <div class="body3_center_chart_left"></div>
+                        <div class="body3_center_chart_right"></div>
+                    </div>
+                </div>
+                <!--右下部分-->
+                <div class="body3_bottom">
+                    <div class="body3_bottom_text1">昨日运营情况</div>
+                    <marquee behavior="scroll" direction="up" scrollaomunt="8" onmouseover="this.stop()" onmouseout="this.start()">
+                        <div class="body3_bottom1">
+                            <span class="body3_bottom_text2">郑州市千玺广场<br>进出车辆7374</span>
+                            <span class="body3_bottom_text3">￥3432345.00</span>
+                            <hr style="width: 90%;color:white;margin:5px auto;border-style: dashed;"/>
+                        </div>
+                        <div class="body3_bottom2">
+                            <span class="body3_bottom_text4">郑州市千玺广场<br>进出车辆7374</span>
+                            <span class="body3_bottom_text5">￥3432345.00</span>
+                            <hr style="width: 90%;color:white;margin:10px auto;border-style: dashed;"/>
+                        </div>
+                        <div class="body3_bottom3">
+                        <span class="body3_bottom_text6">郑州市千玺广场<br>进出车辆7374</span>
+                        <span class="body3_bottom_text7">￥3432345.00</span>
+                        <hr style="width: 90%;color:white;margin:10px auto;border-style: dashed;"/>
+                        </div>
+                        <div class="body3_bottom3">
+                        <span class="body3_bottom_text6">郑州市千玺广场<br>进出车辆7374</span>
+                        <span class="body3_bottom_text7">￥3432345.00</span>
+                        <hr style="width: 90%;color:white;margin:10px auto;border-style: dashed;"/>
+                        </div>
+                        <div class="body3_bottom3">
+                        <span class="body3_bottom_text6">郑州市千玺广场<br>进出车辆7374</span>
+                        <span class="body3_bottom_text7">￥3432345.00</span>
+                        <hr style="width: 90%;color:white;margin:10px auto;border-style: dashed;"/>
+                        </div>
+                        <div class="body3_bottom3">
+                        <span class="body3_bottom_text6">郑州市千玺广场<br>进出车辆7374</span>
+                        <span class="body3_bottom_text7">￥3432345.00</span>
+                        <hr style="width: 90%;color:white;margin:10px auto;border-style: dashed;"/>
+                        </div>
+                    </marquee>
+                </div>
+            </div>
+            <!--右边部分结束-->
+            <!--内容结束-->
+        </div>
+    </div>
+    <script src="js/jquery-2.2.4.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/china.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>
+
+
+
+
